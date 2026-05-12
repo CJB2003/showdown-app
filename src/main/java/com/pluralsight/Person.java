@@ -2,6 +2,11 @@ package com.pluralsight;
 
 public class Person{
 
+    public static final String GREEN = "\u001B[32m";
+    public static final String RED = "\u001B[31m";
+    public static final String reset = "\u001B[0m";
+    public static final String bold = "\u001B[1m";
+
     //Protected
     protected String name;
     protected int health;

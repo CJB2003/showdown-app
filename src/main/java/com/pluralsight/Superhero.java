@@ -4,7 +4,6 @@ import java.util.Random;
 
 public class Superhero extends Person{
 
-
     public Superhero(String name, int health, int powerLevel) {
 
         super(name, health, powerLevel);
@@ -25,10 +24,15 @@ public class Superhero extends Person{
 
         //Figure out how we want to deal that damage to the opponent
         if (damage == 0) {
-            System.out.println(this.name + " missed the attack!\n");
+            System.out.println(GREEN + this.name + reset + " missed the attack!\n");
         } else {
-            System.out.println(this.name + " threw a super punch and dealt " + damage + " damage!\n");
+            System.out.println(GREEN + this.name + reset + " threw a super punch and dealt " + bold + RED + damage + reset + " damage to " + RED + opponent.getName() + reset + "\n");
             opponent.takeDamage(damage);
         }
+    }
+
+    @Override
+    public String getStatus() {
+        return GREEN + this.name + reset + " has " + GREEN + this.health + reset + " health";
     }
 }
