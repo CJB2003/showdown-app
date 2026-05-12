@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class ShowdownApp {
 
     public static final String GREEN = "\u001B[32m";
+    public static final String BLUE = "\u001B[34m";
     public static final String RED = "\u001B[31m";
     private static final String reset = "\u001B[0m";
 
@@ -53,9 +54,9 @@ public class ShowdownApp {
 
         }
         if (someSuperhero.isAlive()) {
-            System.out.println(GREEN + someSuperhero.getName() + reset + " has defeated " + RED + someVillain.getName() + reset + " with " + GREEN + someSuperhero.getHealth() + reset + " health left!");
+            System.out.println(BLUE + someSuperhero.getName() + reset + " has defeated " + RED + someVillain.getName() + reset + " with " + GREEN + someSuperhero.getHealth() + reset + " health left!");
         } else {
-            System.out.println(RED + someVillain.getName() + reset + " has defeated " + GREEN + someSuperhero.getName() + reset + " with " + GREEN + someVillain.getHealth() + reset + " health left!");
+            System.out.println(RED + someVillain.getName() + reset + " has defeated " + BLUE + someSuperhero.getName() + reset + " with " + GREEN + someVillain.getHealth() + reset + " health left!");
         }
 
 //        System.out.println(somePerson.getStatus());

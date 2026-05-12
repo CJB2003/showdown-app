@@ -30,8 +30,10 @@ public class SuperVillain extends Person{
             opponent.takeDamage(damage);
         }
     }
+
     @Override
     public String getStatus() {
-        return RED + this.name + reset + " has " + GREEN + this.health + reset + " health";
+        String colorOfHP = (this.health > 0) ? GREEN : RED;
+        return RED + this.name + reset + " has " + colorOfHP + this.health + reset + " health";
     }
 }

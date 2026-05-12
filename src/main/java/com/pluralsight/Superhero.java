@@ -24,15 +24,18 @@ public class Superhero extends Person{
 
         //Figure out how we want to deal that damage to the opponent
         if (damage == 0) {
-            System.out.println(GREEN + this.name + reset + " missed the attack!\n");
+            System.out.println(BLUE + this.name + reset + " missed the attack!\n");
         } else {
-            System.out.println(GREEN + this.name + reset + " threw a super punch and dealt " + bold + RED + damage + reset + " damage to " + RED + opponent.getName() + reset + "\n");
+            System.out.println(BLUE + this.name + reset + " threw a super punch and dealt " + bold + RED + damage + reset + " damage to " + RED + opponent.getName() + reset + "\n");
             opponent.takeDamage(damage);
         }
     }
 
+    //Needed a custom status for hero and villain colors
     @Override
     public String getStatus() {
-        return GREEN + this.name + reset + " has " + GREEN + this.health + reset + " health";
+        //Ternary op for the color of health
+        String colorOfHP = (this.health > 0) ? GREEN : RED;
+        return BLUE + this.name + reset + " has " + colorOfHP + this.health + reset + " health";
     }
 }
