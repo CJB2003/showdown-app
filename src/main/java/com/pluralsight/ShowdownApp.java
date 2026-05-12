@@ -15,7 +15,7 @@ public class ShowdownApp {
 
         Person somePerson = new Person("Chris", 150, 100);
         Superhero someSuperhero = new Superhero("Super Chris", 250, 65);
-        SuperVillain someVillain = new SuperVillain("Evil Lovi", 250, 65);
+        SuperVillain someVillain = new SuperVillain("Evil Lovi", 300, 65);
 
         myPeople.add(someVillain);
         myPeople.add(somePerson);
@@ -33,8 +33,7 @@ public class ShowdownApp {
                 System.out.println("This was a villain with " + theVillian.getEvilnessLevel() + " evilness");
             }
         }
-        System.out.println();
-
+        System.out.println("\nThe standoff before the fight...");
         System.out.println(someSuperhero.getStatus());
         System.out.println(someVillain.getStatus() + "\n");
 
@@ -54,9 +53,9 @@ public class ShowdownApp {
 
         }
         if (someSuperhero.isAlive()) {
-            System.out.println(GREEN + someSuperhero.getName() + reset + " has defeated " + someVillain.getName() + " with " + GREEN + someSuperhero.getHealth() + reset + " health left!");
+            System.out.println(GREEN + someSuperhero.getName() + reset + " has defeated " + RED + someVillain.getName() + reset + " with " + GREEN + someSuperhero.getHealth() + reset + " health left!");
         } else {
-            System.out.println(RED + someVillain.getName() + reset + " has defeated " + someSuperhero.getName() + " with " + GREEN + someVillain.getHealth() + reset + " health left!");
+            System.out.println(RED + someVillain.getName() + reset + " has defeated " + GREEN + someSuperhero.getName() + reset + " with " + GREEN + someVillain.getHealth() + reset + " health left!");
         }
 
 //        System.out.println(somePerson.getStatus());
